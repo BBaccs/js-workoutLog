@@ -45,9 +45,8 @@ UI.prototype.newLog = function(workout){
 }
 
 UI.prototype.addToLog = function(workout){
- 
-    var tableBody = document.createElement('table');
-    tableBody.innerHTML = `
+    let output = '';
+    output = `
     <tr>
         <th>${workout.exerciseName} </th>
         <th>${workout.weight} </th>
@@ -56,9 +55,9 @@ UI.prototype.addToLog = function(workout){
         <th>X</th>
     </tr>
     `;
+    var tableBody = document.createElement('table');
+    tableBody = output;
     document.getElementsByTagName('table')[0].insertAdjacentHTML('afterbegin', tableBody);
-   
- 
     
 }
 
