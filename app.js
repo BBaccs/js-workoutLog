@@ -49,7 +49,6 @@ UI.prototype.newLog = function(workout){
 }
 
 UI.prototype.addToLog = function(workout, counter){
-    console.log(counter);
     let output = '';
     output = `
     <tr>
@@ -63,10 +62,6 @@ UI.prototype.addToLog = function(workout, counter){
     let tableBody = document.createElement('table');
     tableBody = output;
 
-    //NOTE, Make dynamic tables generated an array, hit the array.lenth-1 instead of counter
-    // tableBody.forEach(table => {
-    //     console.log('hi');
-    // });
     document.getElementsByTagName('table')[counter].insertAdjacentHTML('afterbegin', tableBody);
     
 }
